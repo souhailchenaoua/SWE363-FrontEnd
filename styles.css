@@ -1,4 +1,4 @@
-.logo {
+#logo {
   width: 138px;
   height: 61px;
   padding: 15px 20px;
@@ -10,9 +10,10 @@
 .background_img {
   background-image: url("/1230x768_px_Aerial_View_airplane.png");
   background-repeat: no-repeat;
-  background-size: 106vw 85vh;
+  background-size: 106vw 80vh;
   position: relative;
   margin: 0;
+  height: 85vh;
 }
 
 .navbar.navbar-expand-lg.navbar-light li a {
@@ -73,4 +74,22 @@ footer {
   text-align: center;
   color: #ffffff;
   font-size: 14px;
+}
+
+.modal-footer{
+  justify-content: center;
+
+}
+
+.vertical-center-buttons{
+  margin: 0;
+  justify-content: center;
+  align-items: center;
+}
+
+#loginButton{
+  margin: 0.5em;
+  border: solid 0.1em #2b2d2e;
+  display:block;
+  width: 100%;
 }
