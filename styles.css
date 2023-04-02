@@ -132,3 +132,13 @@ footer {
   width: 20em;
 }
 
+#mapsbtn{
+  display: inline-block;
+  position: fixed;
+  top: 86%;
+  right: 46%;
+  background-color: #2b2d2e;
+  color: #fafafa;
+  border-radius: 1em;
+  box-shadow: #000000;
+}
