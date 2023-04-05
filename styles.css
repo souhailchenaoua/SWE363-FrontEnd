@@ -81,6 +81,8 @@ footer {
   position: relative;
   justify-content: center;
   align-items: center;
+  align-content: center;
+  text-align: center;
 }
 .modal-body{
   justify-content: center;
@@ -141,4 +143,17 @@ footer {
   color: #fafafa;
   border-radius: 1em;
   box-shadow: #000000;
+}
+
+#mapsbtn:active {
+  background: #585555;
+  -webkit-box-shadow: inset 0px 0px 5px #c1c1c1;
+     -moz-box-shadow: inset 0px 0px 5px #c1c1c1;
+          box-shadow: inset 0px 0px 5px #c1c1c1;
+   outline: none;
+}
+
+#carousel-slide{
+  text-align: center;
+  justify-content: center;
 }
