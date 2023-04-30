@@ -76,17 +76,17 @@ footer {
   font-size: 14px;
 }
 
-.modal-footer{
+.modal-footer {
   justify-content: center;
   position: relative;
   justify-content: center;
   align-items: center;
 }
-.modal-body{
+.modal-body {
   justify-content: center;
   align-items: center;
 }
-.policySubmit{
+.policySubmit {
   margin: 0;
   justify-content: center;
   align-items: center;
@@ -94,41 +94,129 @@ footer {
   display: block;
 }
 
-.Signup-content{
+.Signup-content {
   justify-content: center;
   align-items: center;
-  
 }
 
-#country{
+#country {
   margin: 0.5em 0em 0.5em 4.5em;
   border: solid 0.1em #2b2d2e;
   width: 20em;
   position: relative;
 }
-#phone{
+#phone {
   margin: 0.5em 0em 0.5em 0em;
   border: solid 0.1em #2b2d2e;
   width: 20em;
   border-radius: 0.3em;
   padding: 0.3em;
 }
-.vertical-center-buttons{
+#email-signup,#email-login{
+  margin: 0.5em 0em 0.5em 0em;
+  border: solid 0.1em #2b2d2e;
+  width: 20em;
+  border-radius: 0.3em;
+  padding: 0.3em;
+}
+
+#password-signup{
+  margin: 0.5em 0em 0.5em 0em;
+  border: solid 0.1em #2b2d2e;
+  width: 20em;
+  border-radius: 0.3em;
+  padding: 0.3em;
+}
+
+#password-login{
+  margin: 0.5em 0em 0.5em 0em;
+  border: solid 0.1em #2b2d2e;
+  width: 20em;
+  border-radius: 0.3em;
+  padding: 0.3em;
+}
+.vertical-center-buttons {
   margin: 0;
   justify-content: center;
   align-items: center;
-
 }
 
-#loginButton{
+#loginButton {
   margin: 0.5em;
   border: solid 0.1em #2b2d2e;
-  display:block;
+  display: block;
   width: 20em;
 }
 
-#SubmitSignUpBtn{
+#SubmitSignUpBtn {
   margin: 0.5em;
   width: 20em;
 }
 
+#login{
+  margin: 0.5em;
+  border: solid 0.1em #2b2d2e;
+  
+  width: 20em;
+}
+
+#mapsbtn {
+  display: inline-block;
+  position: fixed;
+  top: 86%;
+  right: 46%;
+  background-color: #2b2d2e;
+  color: #fafafa;
+  border-radius: 1em;
+  box-shadow: #000000;
+}
+
+.carousel-inner {
+  width: 25rem;
+  height: 15rem;
+}
+
+.PropertyListing {
+  display: flex;
+}
+.PropertyHeader {
+  margin-left: 2em;
+}
+.PropertyDescription {
+  margin-left: 2em;
+  font-size: 1.5em;
+  font-weight: 500;
+  color: #2b2d2e;
+  width: 75%;
+}
+
+.RoomsBody {
+  margin: 1em;
+}
+
+#PropertyForum {
+  height: 100%;
+  max-width: 50em;
+  padding: 1.875em 1.875em 1.875em 1.875em;
+  background-color: white;
+  font-family: Helvetica;
+  font-weight: 600;
+  color: #484848;
+}
+
+#PropertyTitle {
+  width: 100%;
+}
+
+#location {
+  width: 100%;
+}
+
+#description {
+  width: 45em;
+  width: 100%;
+}
+
+#SubmitPorpertyForum {
+  width: 100%;
+}
