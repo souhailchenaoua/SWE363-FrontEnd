@@ -86,7 +86,7 @@
 	</div>
 	<!-- Modal Pop Up For Signing Up & Login-->
 
-	<div class="modal" tabindex="-1" id="reg-modal">
+	<div class="modal" tabindex="-1" id="reg-modal" data-backdrop="true">
 		<div class="modal-dialog modal-dialog-centered">
 			<div class="modal-content">
 				<div class="modal-header">
@@ -99,8 +99,8 @@
 				<!-- Add Form action path when ready -->
 				<div class="Signup-content">
 					<form action="">
-						<!-- Country names and Country Code -->
-						<select class="form-select" id="country" name="country">
+						 Country names and Country Code 
+						<select class="form-select" id="country" name="country" required> 
 							<option value="" disabled selected>Select your Country</option>
 							<option value="AF">Afghanistan</option>
 							<option value="AX">Aland Islands</option>
@@ -224,14 +224,14 @@
 							<option value="ZM">Zambia</option>
 							<option value="ZW">Zimbabwe</option>
 						</select>
-						<!-- End of Country Select -->
 						<input type="tel" id="phone" name="phone" placeholder="Phone Number" required>
+						
 						<input type="email" id="email-signup" name="email-signup" placeholder="example@email.com" required>
 						<input type="password" id="password-signup" name="password-signup" placeholder="Password" required>
 
 						<br>
 						<p>We will call or text you to confirm your number. Standard message & data rates apply. <a href="">Privacy Policy</a></p>
-						<button type="submit" class="btn btn-primary" id="SubmitSignUpBtn">Continue</button>
+						<button class="btn btn-primary" id="SubmitSignUpBtn">Continue</button>
 					</form>
 						</div>
 					</div>

@@ -9,51 +9,46 @@
   
 	// Your web app's Firebase configuration
 	const firebaseConfig = {
-    apiKey: "AIzaSyBad8knBKI6CSjCZWonJBinsOOElVXBt6M",
-    authDomain: "swe-363-abnb.firebaseapp.com",
-    databaseURL: "https://swe-363-abnb-default-rtdb.asia-southeast1.firebasedatabase.app",
-    projectId: "swe-363-abnb",
-    storageBucket: "swe-363-abnb.appspot.com",
-    messagingSenderId: "898846020774",
-    appId: "1:898846020774:web:883f2453709bdc4dc11067"
- 	};
+		apiKey: "AIzaSyBad8knBKI6CSjCZWonJBinsOOElVXBt6M",
+		authDomain: "swe-363-abnb.firebaseapp.com",
+		databaseURL: "https://swe-363-abnb-default-rtdb.asia-southeast1.firebasedatabase.app",
+		projectId: "swe-363-abnb",
+		storageBucket: "swe-363-abnb.appspot.com",
+		messagingSenderId: "898846020774",
+		appId: "1:898846020774:web:883f2453709bdc4dc11067"
+	  };
+	
   
 	// Initialize Firebase
 	const app = initializeApp(firebaseConfig);
 	const database = getDatabase(app);
 	const auth = getAuth();
-
-	SubmitSignUpBtn.addEventListener('click',(e) =>{
 	
+	SubmitSignUpBtn.addEventListener('click',(e) =>{
 	var phone=	document.getElementById('phone').value;
 	var email = document.getElementById('email-signup').value;
 	var password = document.getElementById('password-signup').value;
-	
-	if(phone != null || email != null || password != null){
-	createUserWithEmailAndPassword(auth, email, password)
-  	.then((userCredential) => {
-    // Signed in 
+	var country = document.getElementById('country').value;
+
+	createUserWithEmailAndPassword(auth, email, password, phone, country).then((userCredential) => {
+    // Signed in
     const user = userCredential.user;
 
 	set(ref(database, 'users/' + user.uid),{
-		phone: phone,
 		email: email,
 		password: password,
-	})	
+		phone: phone,
+		country: country,
+	});
+	})
 
-	alert("You have successfully signed up!");
-  	})
   	.catch((error) => {
     const errorCode = error.code;
     const errorMessage = error.message;
-    
 	alert("errorMessage");
   	});
+	});
 
-	}else{
-		alert("Please fill all the fields!");
-	}
-	})
 
 	login.addEventListener('click',(e) =>{
 	var email =	document.getElementById('email').value;
@@ -65,8 +60,7 @@
     const user = userCredential.user;
 	update(ref (database, 'users/' + user.uid),{
 		last_login: dt,
-	})
-	
+	});
 	alert("You have successfully logged in!");
   
 })
@@ -90,7 +84,8 @@
     // User is signed out
     // ...
   }
-});
+})
+
 	logout.addEventListener('click',(e) =>{
 		signOut(auth).then(() => {
   		// Sign-out successful.
@@ -98,5 +93,5 @@
 		}).catch((error) => {
  		 // An error happened.
 		});
-		});
-	
+});
+
