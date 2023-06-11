@@ -1,0 +1,222 @@
+#logo {
+  width: 138px;
+  height: 61px;
+  padding: 15px 20px;
+  float: left;
+  border-top: none;
+  border-bottom-color: transparent;
+}
+
+.background_img {
+  background-image: url("/1230x768_px_Aerial_View_airplane.png");
+  background-repeat: no-repeat;
+  background-size: 106vw 80vh;
+  position: relative;
+  margin: 0;
+  height: 85vh;
+}
+
+.navbar.navbar-expand-lg.navbar-light li a {
+  color: white;
+  margin-bottom: 20px;
+  padding: 14px 16px;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.navbar.navbar-expand-lg.navbar-light li a:hover {
+  color: white;
+  border-bottom: 3px solid white;
+}
+
+.checked {
+  color: rgb(0, 132, 137);
+}
+
+.btn-primary.btn-lg {
+  background-color: rgb(255, 90, 95);
+  border-color: rgb(255, 90, 95);
+  font-size: 16px;
+}
+
+.container li a {
+  color: #fafafa;
+}
+
+.btn.btn-outline-primary.rounded.nohover {
+  pointer-events: none;
+}
+
+.btn.btn-primary.new {
+  background-color: rgb(0, 106, 112);
+  border: none;
+  font-size: 12px;
+  padding: 1px 4px;
+}
+
+footer {
+  font-family: Circular, Helvetica, Arial, sans-serif;
+  margin-top: 30px;
+  width: 100%;
+  height: 14em;
+  background-image: url("https://a0.muscache.com/airbnb/static/footer/background-317dd7c2cb678ddbdb0a983d511cb9a0.png");
+  background-color: #2b2d2e;
+}
+.footer-content {
+  width: 100%;
+  padding-top: 1em;
+}
+.footer-content hr {
+  background: #ffffff;
+}
+
+.copyright {
+  text-align: center;
+  color: #ffffff;
+  font-size: 14px;
+}
+
+.modal-footer {
+  justify-content: center;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+}
+.modal-body {
+  justify-content: center;
+  align-items: center;
+}
+.policySubmit {
+  margin: 0;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  display: block;
+}
+
+.Signup-content {
+  justify-content: center;
+  align-items: center;
+}
+
+#country {
+  margin: 0.5em 0em 0.5em 4.5em;
+  border: solid 0.1em #2b2d2e;
+  width: 20em;
+  position: relative;
+}
+#phone {
+  margin: 0.5em 0em 0.5em 0em;
+  border: solid 0.1em #2b2d2e;
+  width: 20em;
+  border-radius: 0.3em;
+  padding: 0.3em;
+}
+#email-signup,#email-login{
+  margin: 0.5em 0em 0.5em 0em;
+  border: solid 0.1em #2b2d2e;
+  width: 20em;
+  border-radius: 0.3em;
+  padding: 0.3em;
+}
+
+#password-signup{
+  margin: 0.5em 0em 0.5em 0em;
+  border: solid 0.1em #2b2d2e;
+  width: 20em;
+  border-radius: 0.3em;
+  padding: 0.3em;
+}
+
+#password-login{
+  margin: 0.5em 0em 0.5em 0em;
+  border: solid 0.1em #2b2d2e;
+  width: 20em;
+  border-radius: 0.3em;
+  padding: 0.3em;
+}
+.vertical-center-buttons {
+  margin: 0;
+  justify-content: center;
+  align-items: center;
+}
+
+#loginButton {
+  margin: 0.5em;
+  border: solid 0.1em #2b2d2e;
+  display: block;
+  width: 20em;
+}
+
+#SubmitSignUpBtn {
+  margin: 0.5em;
+  width: 20em;
+}
+
+#login{
+  margin: 0.5em;
+  border: solid 0.1em #2b2d2e;
+  
+  width: 20em;
+}
+
+#mapsbtn {
+  display: inline-block;
+  position: fixed;
+  top: 86%;
+  right: 46%;
+  background-color: #2b2d2e;
+  color: #fafafa;
+  border-radius: 1em;
+  box-shadow: #000000;
+}
+
+.carousel-inner {
+  width: 25rem;
+  height: 15rem;
+}
+
+.PropertyListing {
+  display: flex;
+}
+.PropertyHeader {
+  margin-left: 2em;
+}
+.PropertyDescription {
+  margin-left: 2em;
+  font-size: 1.5em;
+  font-weight: 500;
+  color: #2b2d2e;
+  width: 75%;
+}
+
+.RoomsBody {
+  margin: 1em;
+}
+
+#PropertyForum {
+  height: 100%;
+  max-width: 50em;
+  padding: 1.875em 1.875em 1.875em 1.875em;
+  background-color: white;
+  font-family: Helvetica;
+  font-weight: 600;
+  color: #484848;
+}
+
+#PropertyTitle {
+  width: 100%;
+}
+
+#location {
+  width: 100%;
+}
+
+#description {
+  width: 45em;
+  width: 100%;
+}
+
+#SubmitPorpertyForum {
+  width: 100%;
+}

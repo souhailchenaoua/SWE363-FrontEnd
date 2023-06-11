@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html>
+ 
+<head>
+	<title>Air Bed & Breakfast</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="/styles.css">
+	<link rel="shortcut icon" sizes="76x76" type="image/x-icon" href="index.ico" />
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</head>
+
+<body>
+	
+	<!-- This is to display the Navbar of the website. -->
+	
+	
+	<button class="btn" id="mapsbtn">Show map | <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-map" viewBox="0 0 16 16">
+		<path fill-rule="evenodd" d="M15.817.113A.5.5 0 0 1 16 .5v14a.5.5 0 0 1-.402.49l-5 1a.502.502 0 0 1-.196 0L5.5 15.01l-4.902.98A.5.5 0 0 1 0 15.5v-14a.5.5 0 0 1 .402-.49l5-1a.5.5 0 0 1 .196 0L10.5.99l4.902-.98a.5.5 0 0 1 .415.103zM10 1.91l-4-.8v12.98l4 .8V1.91zm1 12.98 4-.8V1.11l-4 .8v12.98zm-6-.8V1.11l-4 .8v12.98l4-.8z"/>
+	  </svg></button>
+
+	<div class="background_img">
+		<nav class="navbar navbar-expand-lg navbar-light">
+			<a href="">
+				<div class="navbar-brand" id="logo">
+					<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"
+						id="Layer_1" x="0px" y="0px" viewBox="0 0 320.1 99.9" enable-background="new 0 0 320.1 99.9"
+						xml:space="preserve">
+						<path fill="#FF5A5F"
+							d="M168.7,25.1c0,3.6-2.9,6.5-6.5,6.5s-6.5-2.9-6.5-6.5s2.8-6.5,6.5-6.5C165.9,18.7,168.7,21.6,168.7,25.1z   M141.9,38.2c0,0.6,0,1.6,0,1.6s-3.1-4-9.7-4c-10.9,0-19.4,8.3-19.4,19.8c0,11.4,8.4,19.8,19.4,19.8c6.7,0,9.7-4.1,9.7-4.1v1.7  c0,0.8,0.6,1.4,1.4,1.4h8.1V36.8c0,0-7.4,0-8.1,0C142.5,36.8,141.9,37.5,141.9,38.2z M141.9,62.3c-1.5,2.2-4.5,4.1-8.1,4.1  c-6.4,0-11.3-4-11.3-10.8s4.9-10.8,11.3-10.8c3.5,0,6.7,2,8.1,4.1V62.3z M157.4,36.8h9.6v37.6h-9.6V36.8z M300.8,35.8  c-6.6,0-9.7,4-9.7,4V18.7h-9.6v55.7c0,0,7.4,0,8.1,0c0.8,0,1.4-0.7,1.4-1.4v-1.7l0,0c0,0,3.1,4.1,9.7,4.1c10.9,0,19.4-8.4,19.4-19.8  C320.1,44.2,311.6,35.8,300.8,35.8z M299.2,66.3c-3.7,0-6.6-1.9-8.1-4.1V48.8c1.5-2,4.7-4.1,8.1-4.1c6.4,0,11.3,4,11.3,10.8  S305.6,66.3,299.2,66.3z M276.5,52.1v22.4h-9.6V53.2c0-6.2-2-8.7-7.4-8.7c-2.9,0-5.9,1.5-7.8,3.7v26.2h-9.6V36.8h7.6  c0.8,0,1.4,0.7,1.4,1.4v1.6c2.8-2.9,6.5-4,10.2-4c4.2,0,7.7,1.2,10.5,3.6C275.2,42.2,276.5,45.8,276.5,52.1z M218.8,35.8  c-6.6,0-9.7,4-9.7,4V18.7h-9.6v55.7c0,0,7.4,0,8.1,0c0.8,0,1.4-0.7,1.4-1.4v-1.7l0,0c0,0,3.1,4.1,9.7,4.1c10.9,0,19.4-8.4,19.4-19.8  C238.2,44.2,229.7,35.8,218.8,35.8z M217.2,66.3c-3.7,0-6.6-1.9-8.1-4.1V48.8c1.5-2,4.7-4.1,8.1-4.1c6.4,0,11.3,4,11.3,10.8  S223.6,66.3,217.2,66.3z M191.2,35.8c2.9,0,4.4,0.5,4.4,0.5v8.9c0,0-8-2.7-13,3v26.3h-9.6V36.8c0,0,7.4,0,8.1,0  c0.8,0,1.4,0.7,1.4,1.4v1.6C184.3,37.7,188.2,35.8,191.2,35.8z M91.5,71c-0.5-1.2-1-2.5-1.5-3.6c-0.8-1.8-1.6-3.5-2.3-5.1l-0.1-0.1  c-6.9-15-14.3-30.2-22.1-45.2l-0.3-0.6c-0.8-1.5-1.6-3.1-2.4-4.7c-1-1.8-2-3.7-3.6-5.5C56,2.2,51.4,0,46.5,0c-5,0-9.5,2.2-12.8,6  c-1.5,1.8-2.6,3.7-3.6,5.5c-0.8,1.6-1.6,3.2-2.4,4.7l-0.3,0.6C19.7,31.8,12.2,47,5.3,62l-0.1,0.2c-0.7,1.6-1.5,3.3-2.3,5.1  c-0.5,1.1-1,2.3-1.5,3.6c-1.3,3.7-1.7,7.2-1.2,10.8c1.1,7.5,6.1,13.8,13,16.6c2.6,1.1,5.3,1.6,8.1,1.6c0.8,0,1.8-0.1,2.6-0.2  c3.3-0.4,6.7-1.5,10-3.4c4.1-2.3,8-5.6,12.4-10.4c4.4,4.8,8.4,8.1,12.4,10.4c3.3,1.9,6.7,3,10,3.4c0.8,0.1,1.8,0.2,2.6,0.2  c2.8,0,5.6-0.5,8.1-1.6c7-2.8,11.9-9.2,13-16.6C93.2,78.2,92.8,74.7,91.5,71z M46.4,76.2c-5.4-6.8-8.9-13.2-10.1-18.6  c-0.5-2.3-0.6-4.3-0.3-6.1c0.2-1.6,0.8-3,1.6-4.2c1.9-2.7,5.1-4.4,8.8-4.4c3.7,0,7,1.6,8.8,4.4c0.8,1.2,1.4,2.6,1.6,4.2  c0.3,1.8,0.2,3.9-0.3,6.1C55.3,62.9,51.8,69.3,46.4,76.2z M86.3,80.9c-0.7,5.2-4.2,9.7-9.1,11.7c-2.4,1-5,1.3-7.6,1  c-2.5-0.3-5-1.1-7.6-2.6c-3.6-2-7.2-5.1-11.4-9.7c6.6-8.1,10.6-15.5,12.1-22.1c0.7-3.1,0.8-5.9,0.5-8.5c-0.4-2.5-1.3-4.8-2.7-6.8  c-3.1-4.5-8.3-7.1-14.1-7.1s-11,2.7-14.1,7.1c-1.4,2-2.3,4.3-2.7,6.8c-0.4,2.6-0.3,5.5,0.5,8.5c1.5,6.6,5.6,14.1,12.1,22.2  c-4.1,4.6-7.8,7.7-11.4,9.7c-2.6,1.5-5.1,2.3-7.6,2.6c-2.7,0.3-5.3-0.1-7.6-1c-4.9-2-8.4-6.5-9.1-11.7c-0.3-2.5-0.1-5,0.9-7.8  c0.3-1,0.8-2,1.3-3.2c0.7-1.6,1.5-3.3,2.3-5l0.1-0.2c6.9-14.9,14.3-30.1,22-44.9l0.3-0.6c0.8-1.5,1.6-3.1,2.4-4.6  c0.8-1.6,1.7-3.1,2.8-4.4c2.1-2.4,4.9-3.7,8-3.7c3.1,0,5.9,1.3,8,3.7c1.1,1.3,2,2.8,2.8,4.4c0.8,1.5,1.6,3.1,2.4,4.6l0.3,0.6  C67.7,34.8,75.1,50,82,64.9L82,65c0.8,1.6,1.5,3.4,2.3,5c0.5,1.2,1,2.2,1.3,3.2C86.4,75.8,86.7,78.3,86.3,80.9z" />
+					</svg>
+				</div>
+			</a>
+		
+			<div class="collapse navbar-collapse justify-content-end">
+				<script>function HelpAlert(){
+					alert("Please contact us at 0123456789");
+					}</script>
+				<ul class="navbar-nav ml-auto">
+					<li class="nav-item"><a class="nav-link" href="#host" data-bs-toggle="modal"
+						data-bs-target="#reg-modal">Become a host</a></li>
+					<li class="nav-item"><a class="nav-link" href="#help" onclick="HelpAlert()">Help</a></li>
+					<li class="nav-item"><a class="nav-link" data-bs-toggle="modal"
+							data-bs-target="#reg-modal">SignUp</a></li>
+					<li class="nav-item"><a class="nav-link" data-bs-toggle="modal"
+							data-bs-target="#reg-modal-login">Login</a></li>
+				</ul>
+			</div>
+		</nav>
+
+		<!-- End of NavBar -->
+
+		<!-- This is to make the Form Contents appear on the Image -->
+
+		<form class="container mt-3 rounded"
+			style="margin: 9.375em; max-width: 26.25em; padding:1.875em 1.875em 3.75em 1.875em; background-color: white; font-family: Helvetica; font-weight: 600; color: #484848;">
+			<h1 style="font-size: 2em; font-weight: bold; margin-bottom: 15px;">Book unique home and experiences.</h1>
+			<div class="form-group" style=" font-size: small;">
+				<label>WHERE</label><br>
+				<input class="form-control" type="text" placeholder="Anywhere" name="destination" />
+			</div>
+			<div class="input-group-prepend" style=" font-size: small;">
+				<label>CHECK IN</label> &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;
+				<label>CHECK OUT</label><br>
+			</div>
+			<div class="input-group" style=" font-size: small;">
+				<input class="form-control" type="date" placeholder="dd-mm-yyyy" name="checkin" />
+				<input class="form-control" type="date" placeholder="dd-mm-yyyy" name="checkout" />
+			</div>
+			<br>
+			<div class="form-group" style=" font-size: small;">
+				<label>GUESTS</label><br>
+				<select class="custom-select">
+					<option selected>1 guest</option>
+					<option value="Adults">Adults</option>
+					<option value="Children">Children</option>
+					<option value="Infants">Infant</option>
+				</select><br>
+			</div>
+			<div class="form-group">
+				<button type="submit" class="btn btn-primary btn-lg" style="float: right;">Search</button>
+			</div>
+		</form>
+		<!-- Form Ends here. -->
+	</div>
+	<!-- Modal Pop Up For Signing Up & Login-->
+
+	<div class="modal" tabindex="-1" id="reg-modal" data-backdrop="true">
+		<div class="modal-dialog modal-dialog-centered">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title">Log in or Sign up</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+			<div class="modal-body">
+				<h5 style="text-align: center;">Welcome to Air bed & Breakfast</h5>
+				<div class="policySubmit">
+				<!-- Add Form action path when ready -->
+				<div class="Signup-content">
+					<form action="">
+						 Country names and Country Code 
+						<select class="form-select" id="country" name="country" required> 
+							<option value="" disabled selected>Select your Country</option>
+							<option value="AF">Afghanistan</option>
+							<option value="AX">Aland Islands</option>
+							<option value="AL">Albania</option>
+							<option value="DZ">Algeria</option>
+							<option value="AS">American Samoa</option>
+							<option value="AD">Andorra</option>
+							<option value="AO">Angola</option>
+							<option value="AR">Argentina</option>
+							<option value="AM">Armenia</option>
+							<option value="AU">Australia</option>
+							<option value="AT">Austria</option>
+							<option value="AZ">Azerbaijan</option>
+							<option value="BS">Bahamas</option>
+							<option value="BH">Bahrain</option>
+							<option value="BD">Bangladesh</option>
+							<option value="BB">Barbados</option>
+							<option value="BE">Belgium</option>
+							<option value="BO">Bolivia</option>
+							<option value="BA">Bosnia and Herzegovina</option>
+							<option value="BR">Brazil</option>
+							<option value="IO">British Indian Ocean Territory</option>
+							<option value="KH">Cambodia</option>
+							<option value="CM">Cameroon</option>
+							<option value="CA">Canada</option>
+							<option value="CV">Cape Verde</option>
+							<option value="CL">Chile</option>
+							<option value="CO">Colombia</option>
+							<option value="CG">Congo</option>
+							<option value="CD">Congo, Democratic Republic of the Congo</option>
+							<option value="CR">Costa Rica</option>
+							<option value="CY">Cyprus</option>
+							<option value="CZ">Czech Republic</option>
+							<option value="DK">Denmark</option>
+							<option value="DJ">Djibouti</option>
+							<option value="DM">Dominica</option>
+							<option value="DO">Dominican Republic</option>
+							<option value="EC">Ecuador</option>
+							<option value="EG">Egypt</option>
+							<option value="SV">El Salvador</option>
+							<option value="ET">Ethiopia</option>
+							<option value="FJ">Fiji</option>
+							<option value="FI">Finland</option>
+							<option value="FR">France</option>
+							<option value="GA">Gabon</option>
+							<option value="GM">Gambia</option>
+							<option value="DE">Germany</option>
+							<option value="GH">Ghana</option>
+							<option value="GL">Greenland</option>
+							<option value="HT">Haiti</option>
+							<option value="HN">Honduras</option>
+							<option value="HK">Hong Kong</option>
+							<option value="HU">Hungary</option>
+							<option value="IS">Iceland</option>
+							<option value="IN">India</option>
+							<option value="ID">Indonesia</option>
+							<option value="IQ">Iraq</option>
+							<option value="IE">Ireland</option>
+							<option value="IT">Italy</option>
+							<option value="JM">Jamaica</option>
+							<option value="JO">Jordan</option>
+							<option value="KE">Kenya</option>
+							<option value="XK">Kosovo</option>
+							<option value="KW">Kuwait</option>
+							<option value="KG">Kyrgyzstan</option>
+							<option value="LV">Latvia</option>
+							<option value="LB">Lebanon</option>
+							<option value="LY">Libyan Arab Jamahiriya</option>
+							<option value="MY">Malaysia</option>
+							<option value="PS">Palestinian Territory, Occupied</option>
+							<option value="PA">Panama</option>
+							<option value="PG">Papua New Guinea</option>
+							<option value="PY">Paraguay</option>
+							<option value="PE">Peru</option>
+							<option value="PH">Philippines</option>
+							<option value="PL">Poland</option>
+							<option value="PT">Portugal</option>
+							<option value="PR">Puerto Rico</option>
+							<option value="QA">Qatar</option>
+							<option value="RO">Romania</option>
+							<option value="RU">Russian Federation</option>
+							<option value="RW">Rwanda</option>
+							<option value="BL">Saint Barthelemy</option>
+							<option value="SH">Saint Helena</option>
+							<option value="KN">Saint Kitts and Nevis</option>
+							<option value="LC">Saint Lucia</option>
+							<option value="MF">Saint Martin</option>
+							<option value="SO">Somalia</option>
+							<option value="ZA">South Africa</option>
+							<option value="GS">South Georgia and the South Sandwich Islands</option>
+							<option value="SS">South Sudan</option>
+							<option value="ES">Spain</option>
+							<option value="LK">Sri Lanka</option>
+							<option value="SD">Sudan</option>
+							<option value="SJ">Svalbard and Jan Mayen</option>
+							<option value="SZ">Swaziland</option>
+							<option value="SE">Sweden</option>
+							<option value="CH">Switzerland</option>
+							<option value="SY">Syrian Arab Republic</option>
+							<option value="TJ">Tajikistan</option>
+							<option value="TZ">Tanzania, United Republic of</option>
+							<option value="TH">Thailand</option>
+							<option value="TL">Timor-Leste</option>
+							<option value="TG">Togo</option>
+							<option value="TO">Tonga</option>
+							<option value="TT">Trinidad and Tobago</option>
+							<option value="TN">Tunisia</option>
+							<option value="TR">Turkey</option>
+							<option value="TV">Tuvalu</option>
+							<option value="UG">Uganda</option>
+							<option value="UA">Ukraine</option>
+							<option value="AE">United Arab Emirates</option>
+							<option value="GB">United Kingdom</option>
+							<option value="US">United States</option>
+							<option value="VN">Viet Nam</option>
+							<option value="VG">Virgin Islands, British</option>
+							<option value="VI">Virgin Islands, U.s.</option>
+							<option value="WF">Wallis and Futuna</option>
+							<option value="EH">Western Sahara</option>
+							<option value="YE">Yemen</option>
+							<option value="ZM">Zambia</option>
+							<option value="ZW">Zimbabwe</option>
+						</select>
+						<input type="tel" id="phone" name="phone" placeholder="Phone Number" required>
+						
+						<input type="email" id="email-signup" name="email-signup" placeholder="example@email.com" required>
+						<input type="password" id="password-signup" name="password-signup" placeholder="Password" required>
+
+						<br>
+						<p>We will call or text you to confirm your number. Standard message & data rates apply. <a href="">Privacy Policy</a></p>
+						<button class="btn btn-primary" id="SubmitSignUpBtn">Continue</button>
+					</form>
+						</div>
+					</div>
+				</div>
+				<div class="modal-footer">
+					<div class="vertical-center-buttons">
+						<button type="button" class="btn" id="loginButton" onclick=""><svg xmlns="http://www.w3.org/2000/svg"
+								width="16" height="16" fill="currentColor" class="bi bi-google" viewBox="0 0 16 16">
+								<path
+									d="M15.545 6.558a9.42 9.42 0 0 1 .139 1.626c0 2.434-.87 4.492-2.384 5.885h.002C11.978 15.292 10.158 16 8 16A8 8 0 1 1 8 0a7.689 7.689 0 0 1 5.352 2.082l-2.284 2.284A4.347 4.347 0 0 0 8 3.166c-2.087 0-3.86 1.408-4.492 3.304a4.792 4.792 0 0 0 0 3.063h.003c.635 1.893 2.405 3.301 4.492 3.301 1.078 0 2.004-.276 2.722-.764h-.003a3.702 3.702 0 0 0 1.599-2.431H8v-3.08h7.545z" />
+							</svg> | Continue with Google</button>
+						<button type="button" class="btn" id="loginButton"><svg xmlns="http://www.w3.org/2000/svg"
+								width="16" height="16" fill="currentColor" class="bi bi-apple" viewBox="0 0 16 16">
+								<path
+									d="M11.182.008C11.148-.03 9.923.023 8.857 1.18c-1.066 1.156-.902 2.482-.878 2.516.024.034 1.52.087 2.475-1.258.955-1.345.762-2.391.728-2.43Zm3.314 11.733c-.048-.096-2.325-1.234-2.113-3.422.212-2.189 1.675-2.789 1.698-2.854.023-.065-.597-.79-1.254-1.157a3.692 3.692 0 0 0-1.563-.434c-.108-.003-.483-.095-1.254.116-.508.139-1.653.589-1.968.607-.316.018-1.256-.522-2.267-.665-.647-.125-1.333.131-1.824.328-.49.196-1.422.754-2.074 2.237-.652 1.482-.311 3.83-.067 4.56.244.729.625 1.924 1.273 2.796.576.984 1.34 1.667 1.659 1.899.319.232 1.219.386 1.843.067.502-.308 1.408-.485 1.766-.472.357.013 1.061.154 1.782.539.571.197 1.111.115 1.652-.105.541-.221 1.324-1.059 2.238-2.758.347-.79.505-1.217.473-1.282Z" />
+								<path
+									d="M11.182.008C11.148-.03 9.923.023 8.857 1.18c-1.066 1.156-.902 2.482-.878 2.516.024.034 1.52.087 2.475-1.258.955-1.345.762-2.391.728-2.43Zm3.314 11.733c-.048-.096-2.325-1.234-2.113-3.422.212-2.189 1.675-2.789 1.698-2.854.023-.065-.597-.79-1.254-1.157a3.692 3.692 0 0 0-1.563-.434c-.108-.003-.483-.095-1.254.116-.508.139-1.653.589-1.968.607-.316.018-1.256-.522-2.267-.665-.647-.125-1.333.131-1.824.328-.49.196-1.422.754-2.074 2.237-.652 1.482-.311 3.83-.067 4.56.244.729.625 1.924 1.273 2.796.576.984 1.34 1.667 1.659 1.899.319.232 1.219.386 1.843.067.502-.308 1.408-.485 1.766-.472.357.013 1.061.154 1.782.539.571.197 1.111.115 1.652-.105.541-.221 1.324-1.059 2.238-2.758.347-.79.505-1.217.473-1.282Z" />
+							</svg> | Continue with Apple</button>
+						<button type="button" class="btn" id="loginButton"><svg xmlns="http://www.w3.org/2000/svg"
+								width="16" height="16" fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16">
+								<path
+									d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z" />
+							</svg> | Continue with Email</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Login Modal -->
+	<div class="modal" tabindex="-1" id="reg-modal-login">
+		<div class="modal-dialog modal-dialog-centered">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title">Login to AirBed & Breakfast</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+			<div class="modal-body">
+				<h5 style="text-align: center;">Welcome to Air bed & Breakfast</h5>
+				<div class="policySubmit">
+				<!-- Add Form action path when ready -->
+				<div class="login-content">
+					<form action="">
+						<!-- End of Country Select -->
+						<input type="email" id="email-login" name="email-login" placeholder="example@email.com" required>
+						<input type="password" id="password-login" name="password-login" placeholder="Password" required>
+						<br>
+						<button type="submit" class="btn btn-primary" id="login">Login</button>
+					</form>
+						</div>
+					</div>
+				</div>
+				<div class="modal-footer">
+					<div class="vertical-center-buttons">
+						<button type="button" class="btn" id="loginButton" onclick=""><svg xmlns="http://www.w3.org/2000/svg"
+								width="16" height="16" fill="currentColor" class="bi bi-google" viewBox="0 0 16 16">
+								<path
+									d="M15.545 6.558a9.42 9.42 0 0 1 .139 1.626c0 2.434-.87 4.492-2.384 5.885h.002C11.978 15.292 10.158 16 8 16A8 8 0 1 1 8 0a7.689 7.689 0 0 1 5.352 2.082l-2.284 2.284A4.347 4.347 0 0 0 8 3.166c-2.087 0-3.86 1.408-4.492 3.304a4.792 4.792 0 0 0 0 3.063h.003c.635 1.893 2.405 3.301 4.492 3.301 1.078 0 2.004-.276 2.722-.764h-.003a3.702 3.702 0 0 0 1.599-2.431H8v-3.08h7.545z" />
+							</svg> | Login with Google</button>
+						<button type="button" class="btn" id="loginButton"><svg xmlns="http://www.w3.org/2000/svg"
+								width="16" height="16" fill="currentColor" class="bi bi-apple" viewBox="0 0 16 16">
+								<path
+									d="M11.182.008C11.148-.03 9.923.023 8.857 1.18c-1.066 1.156-.902 2.482-.878 2.516.024.034 1.52.087 2.475-1.258.955-1.345.762-2.391.728-2.43Zm3.314 11.733c-.048-.096-2.325-1.234-2.113-3.422.212-2.189 1.675-2.789 1.698-2.854.023-.065-.597-.79-1.254-1.157a3.692 3.692 0 0 0-1.563-.434c-.108-.003-.483-.095-1.254.116-.508.139-1.653.589-1.968.607-.316.018-1.256-.522-2.267-.665-.647-.125-1.333.131-1.824.328-.49.196-1.422.754-2.074 2.237-.652 1.482-.311 3.83-.067 4.56.244.729.625 1.924 1.273 2.796.576.984 1.34 1.667 1.659 1.899.319.232 1.219.386 1.843.067.502-.308 1.408-.485 1.766-.472.357.013 1.061.154 1.782.539.571.197 1.111.115 1.652-.105.541-.221 1.324-1.059 2.238-2.758.347-.79.505-1.217.473-1.282Z" />
+								<path
+									d="M11.182.008C11.148-.03 9.923.023 8.857 1.18c-1.066 1.156-.902 2.482-.878 2.516.024.034 1.52.087 2.475-1.258.955-1.345.762-2.391.728-2.43Zm3.314 11.733c-.048-.096-2.325-1.234-2.113-3.422.212-2.189 1.675-2.789 1.698-2.854.023-.065-.597-.79-1.254-1.157a3.692 3.692 0 0 0-1.563-.434c-.108-.003-.483-.095-1.254.116-.508.139-1.653.589-1.968.607-.316.018-1.256-.522-2.267-.665-.647-.125-1.333.131-1.824.328-.49.196-1.422.754-2.074 2.237-.652 1.482-.311 3.83-.067 4.56.244.729.625 1.924 1.273 2.796.576.984 1.34 1.667 1.659 1.899.319.232 1.219.386 1.843.067.502-.308 1.408-.485 1.766-.472.357.013 1.061.154 1.782.539.571.197 1.111.115 1.652-.105.541-.221 1.324-1.059 2.238-2.758.347-.79.505-1.217.473-1.282Z" />
+							</svg> | Login with Apple</button>
+						<button type="button" class="btn" id="loginButton"><svg xmlns="http://www.w3.org/2000/svg"
+								width="16" height="16" fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16">
+								<path
+									d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z" />
+							</svg> | Login with Email</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- The below section displays the Reviews and Feedbacks given by the users. -->
+
+	<div style="padding: 2px 100px; font-size: 14px; font-family: Helvetica;">
+		<h3>Choose a place to stay</h3>
+
+	<!-- Reviews and Feedbacks which uses Bootstrap Grid property, includes images  -->
+
+	<div class="container" style="padding: 5px;">
+
+		<!-- Bootstrap's grid system is built with flexbox and allows up to 12 columns across the page. A grid row is divided into 12 parts. -->
+
+		<!-- The grid system is responsive, and the columns will re-arrange automatically depending on the screen size.
+			Make sure that the sum adds up to 12 or fewer. -->
+
+		<div class="row">
+			<!-- The Bootstrap 4 grid system has five classes: -->
+
+			<!-- .col- (extra small devices - screen width less than 576px)
+				.col-sm- (small devices - screen width equal to or greater than 576px)
+				.col-md- (medium devices - screen width equal to or greater than 768px)
+				.col-lg- (large devices - screen width equal to or greater than 992px)
+				.col-xl- (xlarge devices - screen width equal to or greater than 1200px)
+				The classes above can be combined to create more dynamic and flexible layouts. -->
+				
+			<div class="col-md-4">
+
+				<div id="carouselIndicators" class="carousel slide" data-bs-ride="carousel" width="100%" height="100%">
+					<div class="carousel-indicators">
+					  <button type="button" data-bs-target="#carouselIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+					  <button type="button" data-bs-target="#carouselIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+					  <button type="button" data-bs-target="#carouselIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+					</div>
+					<div class="carousel-inner">
+					  <div class="carousel-item active">
+						<a href="Rooms.html">
+							<img src="/dubaiUAE.png" class="d-block w-100" alt="...">
+						</a>
+					  </div>
+					  <div class="carousel-item">
+						<a href="Rooms.html">
+							<img src="/dubaiUAE1.png" class="d-block w-100" alt="...">
+						</a>
+					  </div>
+					  <div class="carousel-item">
+						<a href="Rooms.html">
+							<img src="/dubaiUAE2.png" class="d-block w-100" alt="...">
+						</a>
+					  </div>
+					</div>
+					<button class="carousel-control-prev" type="button" data-bs-target="#carouselIndicators" data-bs-slide="prev">
+					  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+					  <span class="visually-hidden">Previous</span>
+					</button>
+					<button class="carousel-control-next" type="button" data-bs-target="#carouselIndicators" data-bs-slide="next">
+					  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+					  <span class="visually-hidden">Next</span>
+					</button>
+				  </div>
+
+			</div>
+
+			<div class="col-md-4">
+				<div id="carouselIndicators1" class="carousel slide" data-bs-ride="carousel" width="100%" height="100%">
+					<div class="carousel-indicators">
+					  <button type="button" data-bs-target="#carouselIndicators1" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+					  <button type="button" data-bs-target="#carouselIndicators1" data-bs-slide-to="1" aria-label="Slide 2"></button>
+					  <button type="button" data-bs-target="#carouselIndicators1" data-bs-slide-to="2" aria-label="Slide 3"></button>
+					</div>
+					<div class="carousel-inner">
+					  <div class="carousel-item active">
+						<a href="">
+							<img src="/AyiaNapa.png" class="d-block w-100" alt="...">
+						</a>
+					  </div>
+					  <div class="carousel-item">
+						<a href="">
+							<img src="/AyiaNapa1.png" class="d-block w-100" alt="...">
+						</a>
+					  </div>
+					  <div class="carousel-item">
+						<a href="">
+							<img src="/AyiaNapa3.png" class="d-block w-100" alt="...">
+						</a>
+					  </div>
+					</div>
+					<button class="carousel-control-prev" type="button" data-bs-target="#carouselIndicators1" data-bs-slide="prev">
+					  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+					  <span class="visually-hidden">Previous</span>
+					</button>
+					<button class="carousel-control-next" type="button" data-bs-target="#carouselIndicators1" data-bs-slide="next">
+					  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+					  <span class="visually-hidden">Next</span>
+					</button>
+				  </div>
+			</div>
+			<div class="col-md-4">
+				<div id="carouselIndicators2" class="carousel slide" data-bs-ride="carousel" width="100%" height="100%">
+					<div class="carousel-indicators">
+					  <button type="button" data-bs-target="#carouselIndicators2" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+					  <button type="button" data-bs-target="#carouselIndicators2" data-bs-slide-to="1" aria-label="Slide 2"></button>
+					  <button type="button" data-bs-target="#carouselIndicators2" data-bs-slide-to="2" aria-label="Slide 3"></button>
+					</div>
+					<div class="carousel-inner">
+					  <div class="carousel-item active">
+						<a href="">
+							<img src="/HurghadaEgypt.png" class="d-block w-100" alt="...">
+						</a>
+					  </div>
+					  <div class="carousel-item">
+						<a href="">
+							<img src="/HurghadaEgypt1.png" class="d-block w-100" alt="...">
+						</a>
+					  </div>
+
+					  <div class="carousel-item">
+						<a href="">
+							<img src="/HurghadaEgpyt2.png" class="d-block w-100" alt="...">
+						</a>
+					  </div>
+
+					</div>
+					<button class="carousel-control-prev" type="button" data-bs-target="#carouselIndicators2" data-bs-slide="prev">
+					  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+					  <span class="visually-hidden">Previous</span>
+					</button>
+					<button class="carousel-control-next" type="button" data-bs-target="#carouselIndicators2" data-bs-slide="next">
+					  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+					  <span class="visually-hidden">Next</span>
+					</button>
+				  </div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Reviews and Feedbacks which displays star ratings -->
+
+	<div class="container" style="padding: 5px;">
+		<div class="row">
+			<div class="col-md-4">
+				<span class="fa fa-star checked"></span>
+				<span class="fa fa-star checked"></span>
+				<span class="fa fa-star checked"></span>
+				<span class="fa fa-star checked"></span>
+				<span class="fa fa-star checked"></span>
+			</div>
+			<div class="col-md-4">
+				<span class="fa fa-star checked"></span>
+				<span class="fa fa-star checked"></span>
+				<span class="fa fa-star checked"></span>
+				<span class="fa fa-star checked"></span>
+				<span class="fa fa-star checked"></span>
+			</div>
+			<div class="col-md-4">
+				<span class="fa fa-star checked"></span>
+				<span class="fa fa-star checked"></span>
+				<span class="fa fa-star checked"></span>
+				<span class="fa fa-star checked"></span>
+				<span class="fa fa-star checked"></span>
+			</div>
+		</div>
+	</div>
+
+	<!-- Reviews and Feedbacks which uses Bootstrap Grid property, includes text -->
+
+	<div class="container" style="padding: 3px; font-size: 14px; font-family: Helvetica;">
+		<div class="row">
+			<div class="col-md-4">
+				<p>Diana and KC have been the perfect host. Even though they were in another country, they made sure all
+					our needs are fulfilled.
+					From sho...</p>
+			</div>
+			<div class="col-md-4">
+				<p>I had no idea I had family members in Mumbai, and this is very much how I felt leaving Soraya and
+					Fabia. Their hospitality and generosity are...</p>
+			</div>
+			<div class="col-md-4">
+				<p>My name is Jeannette, and I stayed with my partner Matthew at Magpie Villa for a little under a week
+					last week. Staying in Amita's...</p>
+			</div>
+		</div>
+	</div>
+
+	<!-- Reviews and Feedbacks of data about a particular user -->
+
+	<div class="container" style="margin-bottom: 10px;">
+		<div class="row">
+			<div class="col-md-4">
+				<div class="row">
+					<div class="col-md-10">
+						<p style="font-weight: bold; font-family: Helvetica; margin: 0;">City</p>
+						<p>Country</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-4">
+				<div class="row">
+					<div class="col-md-10">
+						<p style="font-weight: bold; font-family: Helvetica; margin: 0;">City</p>
+						<p>Country</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-4">
+				<div class="row">
+					<div class="col-md-10">
+						<p style="font-weight: bold; font-family: Helvetica; margin: 0;">City</p>
+						<p>Country</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<hr>
+</body>
+<footer>
+	<div class="footer-content">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-3">
+					<section>
+						<h6 style="margin-left: 40px; color: #ffffff;">Airbnb</h6>
+						<ul style="list-style: none;">
+							<li><a href="#">Help</a></li>
+							<li><a href="#">Policies</a></li>
+							<li><a href="#">Terms</a></li>
+							<li><a href="#">Privacy</a></li>
+						</ul>
+					</section>
+				</div>
+				<div class="col-md-3">
+					<section>
+						<h6 style="margin-left: 40px; color: #ffffff;">Discover</h6>
+						<ul style="list-style: none;">
+							<li><a href="#">Trust & Safety</a></li>
+							<li><a href="#">Site Map</a></li>
+						</ul>
+					</section>
+				</div>
+				<div class="col-md-3">
+					<section>
+						<h6 style="margin-left: 40px;  color: #ffffff;">Hosting</h6>
+						<ul style="list-style: none;">
+							<li><a href="#">Why Host</a></li>
+							<li><a href="#">Responsible Hosting</a></li>
+							<li><a href="#">Open Homes</a>&emsp;<a href="#"><button type="button"
+										class="btn btn-primary new">New</button></a></li>
+						</ul>
+					</section>
+				</div>
+				<div class="col-md-3">
+					<section>
+						<h5 style="margin-left: 40px;">
+							<a href="#" style="color: #ffffff;"><i class="fa fa-facebook"
+									style="padding-right: 15px;"></i></a>
+							<a href="#" style="color: #ffffff;"><i class="fa fa-twitter"
+									style="padding-right: 15px;"></i></a>
+							<a href="#" style="color:  #ffffff;"><i class="fa fa-instagram"
+									style="padding-right: 15px;"></i></a>
+						</h5>
+						<ul style="list-style: none;">
+							<li><a href="#">Terms</a></li>
+							<li><a href="#">Privacy</a></li>
+							<li><a href="#">Site Map</a></li>
+						</ul>
+					</section>
+				</div>
+			</div>
+		</div>§
+		<div class="copyright"> &copy; Airbnb, Inc.</div>
+	</div>
+</footer>
+
+<script type="module" src="index.js"></script>
+</html>
